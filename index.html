@@ -1851,6 +1851,24 @@
 </section>
    <script src="Beclout1.js" > </script>
    <script src="api.js"></script>
+	<script>
+$.ajax({
+    url: "https://learning-bs.myshopify.com/admin/api/2022-10/collections/273402626093/products.json",
+    beforeSend: function(xhr) { 
+      xhr.setRequestHeader("Authorization", "Basic " + btoa("https://learning-bs.myshopify.com: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")); 
+    },
+    type: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+    processData: false,
+    success: function (data) {
+      alert(JSON.stringify(data));
+    },
+    error: function(){
+      alert("Cannot get data");
+    }
+});
+</script>
 
 </body>
 </html>
